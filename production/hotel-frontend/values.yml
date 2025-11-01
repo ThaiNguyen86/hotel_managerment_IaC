@@ -36,7 +36,7 @@ ingress:
   tls:
   - hosts:
       - hotel-frontend.project3cloudinus.click
-    secretName: sideproject1-fe
+    secretName: hotel-frontend
   rules:
   - host: hotel-frontend.project3cloudinus.click
     paths:
