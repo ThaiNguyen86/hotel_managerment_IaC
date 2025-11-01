@@ -39,7 +39,7 @@ ingress:
   tls:
   - hosts:
       - hotel-backend.project3cloudinus.click
-    secretName: hotel-backend
+    secretName: hotel-backend-tls
   rules:
   - host: hotel-backend.project3cloudinus.click
     paths:
