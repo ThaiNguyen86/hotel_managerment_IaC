@@ -22,6 +22,9 @@ deployments:
 env:
   ENV: prod
   TZ: Asia/Ho_Chi_Minh
+envFrom:
+    - configMapRef:
+        name: hotel-frontend-env
 ingress:
   enabled: true
   plugins: []
