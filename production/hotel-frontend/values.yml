@@ -10,21 +10,18 @@ deployments:
   #   kubernetes.io/arch: arm64
   prometheusEnabled: false
   service:
-    name: hotel-backend
-    HTTPPort: 8080
+    name: hotel-frontend
+    HTTPPort: 80
     health:
-      live: "/health"
-      ready: "/health"
+      live: "/"
+      ready: "/"
       initialDelaySeconds: 60
-      periodSeconds: 10
+      periodSeconds: 15
       failureThreshold: 5
       timeoutSeconds: 3
 env:
   ENV: prod
   TZ: Asia/Ho_Chi_Minh
-envFrom:
-    - configMapRef:
-        name: hotel-backend-env
 ingress:
   enabled: true
   plugins: []
@@ -39,7 +36,7 @@ ingress:
   tls:
   - hosts:
       - hotel-frontend.project3cloudinus.click
-    secretName: hotel-frontend
+    secretName: sideproject1-fe
   rules:
   - host: hotel-frontend.project3cloudinus.click
     paths:
@@ -51,7 +48,7 @@ resources:
   #   cpu: "500m"
   #   memory: "1Gi"
   limits:
-    cpu: "4"
-    memory: "4500Mi"
+    cpu: "760m"
+    memory: "1200Mi"
 infisical:
   enabled: false
