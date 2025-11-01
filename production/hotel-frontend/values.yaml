@@ -11,7 +11,7 @@ deployments:
   prometheusEnabled: false
   service:
     name: hotel-frontend
-    HTTPPort: 3000
+    HTTPPort: 80
     health:
       live: "/"
       ready: "/"
