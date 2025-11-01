@@ -21,7 +21,6 @@ deployments:
       timeoutSeconds: 3
 env:
   ENV: prod
-  TZ: Asia/Ho_Chi_Minh
 envFrom:
     - configMapRef:
         name: hotel-frontend-env

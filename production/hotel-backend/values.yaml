@@ -11,7 +11,7 @@ deployments:
   prometheusEnabled: false
   service:
     name: hotel-backend
-    HTTPPort: 8080
+    HTTPPort: 4000
     health:
       live: "/health"
       ready: "/health"
@@ -21,7 +21,6 @@ deployments:
       timeoutSeconds: 3
 env:
   ENV: prod
-  TZ: Asia/Ho_Chi_Minh
 envFrom:
     - configMapRef:
         name: hotel-backend-env
