@@ -22,7 +22,7 @@ deployments:
 env:
   ENV: prod
 envFrom:
-    - configMapRef:
+    - secretRef::
         name: hotel-frontend-env
 ingress:
   enabled: true
