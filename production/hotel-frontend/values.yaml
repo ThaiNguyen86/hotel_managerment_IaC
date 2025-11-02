@@ -53,4 +53,4 @@ resources:
     cpu: "760m"
     memory: "1200Mi"
 infisical:
-  enabled: false
+  enabled: true

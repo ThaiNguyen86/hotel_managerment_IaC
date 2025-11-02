@@ -52,4 +52,4 @@ resources:
     memory: "4500Mi"
 
 infisical:
-  enabled: false
+  enabled: true
