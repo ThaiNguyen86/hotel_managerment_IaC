@@ -7,15 +7,13 @@ imagePullSecrets:
 deployments:
 - name: hotel-backend
   replicasCount: 1
-  # nodeSelector:
-  #   kubernetes.io/arch: arm64
   prometheusEnabled: false
   service:
     name: hotel-backend
     HTTPPort: 4000
     health:
-      live: "/health"
-      ready: "/health"
+      live: "/"
+      ready: "/"
       initialDelaySeconds: 60
       periodSeconds: 10
       failureThreshold: 5
