@@ -20,11 +20,12 @@ deployments:
       periodSeconds: 10
       failureThreshold: 5
       timeoutSeconds: 3
-env:
-  ENV: prod
-envFrom:
+  envFrom:
     - configMapRef:
         name: hotel-backend-env
+env:
+  ENV: prod
+
 ingress:
   enabled: true
   plugins: []
